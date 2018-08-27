@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""/>
+	<meta name="_ctx" th:content="@{/}" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link th:href="@{/css/plugins/index/jquery.countdown.css}" rel="stylesheet" />
+	<link th:href="@{/css/plugins/index/style.css}"  rel="stylesheet" />
+	<link th:href="@{/css/plugins/index/asap.css}" rel="stylesheet" />
+	<link th:href="@{/css/plugins/index/roboto.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+	<!--header-->
+	<h1>欢迎您的到来</h1>
+	<!--//header-->
+	<!-- content -->
+	<div class="main-content-agile">
+		<div class="w3l-agile">
+			<h2>在这里您即将看到一个神奇的世界</h2>
+			<p>OUO的世界开启时间</p>
+		</div>
+		<!--timer-->
+		<div class="examples">
+			<div class="simply-countdown-losange" id="simply-countdown-losange"></div>
+			<div class="clear"></div>
+		</div>
+		<!--//timer-->
+		<!-- newsletter -->
+		<div class="sub-main-w3">
+			<form action="#">
+				<p>你准备好世界钥匙了么？</p>
+				<div class="form-style-agile">
+					<input placeholder="您的神奇钥匙" id="email" name="email" type="email" required=""/>
+					<input id="sub" type="submit" value="开启"/>
+				</div>
+			</form>
+		</div>
+		<!-- //newsletter -->
+	</div>
+
+	<!-- <div class="footer">
+		<p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+	</div> -->
+
+	<script th:src="@{/js/plugins/jquery-2.2.3.min.js}"/>
+	<script th:src="@{/js/base.js}"/>
+	<script th:src="@{/js/demo/simplyCountdown.js}"/>
+	<script>
+        $(document).ready(function(){
+            $('#simply-countdown-losange').simplyCountdown({
+                year: 2019,
+                month: 1,
+                day: 06
+            });
+
+            $("#sub").click(function () {
+                $.ajax({
+                    dataType:"json",
+                    url: _ctx()+"/admin/login",
+                    email:$("#email").val(),
+                    type: "post",
+                    success:function(data){
+
+                    }
+                });
+            })
+		});
+
+	</script>
+
+</body>
+
+</html>
