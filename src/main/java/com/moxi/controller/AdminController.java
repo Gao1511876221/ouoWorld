@@ -39,6 +39,15 @@ public class AdminController {
 		return "presentation";
 	}
 	/**
+	 *
+	 * @return
+	 */
+	@GetMapping("/game")
+	public String game() {
+
+		return "game";
+	}
+	/**
 	 * 登录
 	 * 
 	 * @param admin

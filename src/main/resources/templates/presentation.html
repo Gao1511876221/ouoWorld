@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Bodo</title>
+<title>大头</title>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Bodo - Simple One Page Personal" name="description"/>
@@ -17,12 +17,9 @@
 <link th:href="@{/css/plugins/presentation/magnific-popup.css}" rel="stylesheet" />
 <link th:href="@{/css/plugins/presentation/style.css}" rel="stylesheet" />
 <link th:href="@{/css/plugins/presentation/responsive.css}" rel="stylesheet" />
-
-
-
-<!--fonts google-->
-<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'/>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+	<!--fonts google-->
+<link th:href="@{/css/plugins/presentation/css1.css}" rel="stylesheet" />
+<link th:href="@{/css/plugins/presentation/css2.css}" rel="stylesheet" />
 
 <!--[if lt IE 9]>
 	<script th:src="@{/js/plugins/presentation/jquery-2.2.3.min.js}"></script>
@@ -102,7 +99,7 @@
 		<div class="row">
 		  <div class="wrap-hero-content">
 			  <div class="hero-content">
-				<h1>Hello</h1>
+				<h1>Hollo</h1>
 				<br/>
 				<span class="typed"></span>
 			  </div>
@@ -128,13 +125,14 @@
 			  <div class="wrap-about">
 				<div class="w-content">
 				  <p class="head-about">
-					Design is the method of putting form and content together. Design, just as art, has multiple definitions there is no single definition. Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated.
+					  吃吃喝喝，你还想让我干啥，抓老鼠么？
 				  </p>
 				  
 				  <h5 class="name">
-					M. Reza
+					签名
 				  </h5>
-				  <img alt="signature"  th:src="@{/img/presentation/signature.png}"/>
+				  <img alt="signature"  th:src="@{/img/presentation/dogFoot.png}" style="width: 200px;height: 200px;"/>
+
 				</div>
 			  </div>
 			</div>
@@ -145,39 +143,34 @@
 				  <div class="wrap-about">
 					<table class="w-content">
 					  <tr>
-						<td class="title">Name </td>
+						<td class="title">名字 </td>
 						<td class="break">:</td>
-						<td> M. Reza</td>
+						<td> 大头</td>
 					  </tr>
 					  <tr>
-						<td class="title">Phone </td>
+						<td class="title">电话 </td>
 						<td class="break">:</td>
 						<td> +62 8678 999 012</td>
 					  </tr>
 					  <tr>
-						<td class="title">Email </td>
+						<td class="title">邮箱 </td>
 						<td class="break">:</td>
 						<td> bdgpixel@gmail.com</td>
 					  </tr>
 					  <tr>
-						<td class="title">Address </td>
+						<td class="title">地址 </td>
 						<td class="break">:</td>
 						<td> Cipamokolan street 102 , Bandung, Indonesia</td>
 					  </tr>
 					  <tr>
-						<td class="title">Skype </td>
+						<td class="title">微信 </td>
 						<td class="break">:</td>
 						<td> bdgpixel</td>
 					  </tr>
 					  <tr>
-						<td class="title">Dribbble </td>
+						<td class="title">QQ </td>
 						<td class="break">:</td>
 						<td> Muh-Reza</td>
-					  </tr>
-					  <tr>
-						<td class="title">Behance</td>
-						<td class="break">:</td>
-						<td> m-reza</td>
 					  </tr>
 					</table>
 				  </div>
@@ -197,20 +190,22 @@
 		<div class="row">
 		  <div class="col-md-3">
 			<h3 class="title-small">
-			  <span>Work</span>
+			  <span>生活</span>
 			</h3>
 			<p class="content-detail">
-			  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br/><br/>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.
+			 个人靓照 <br/>
 			</p>
 		  </div>
 		  <div class="col-md-9 content-right">
 			<!--PORTFOLIO IMAGE-->
 			<ul class="portfolio-image">
 			  <li class="col-md-6">
-				<a th:href="@{/img/presentation/bw-1.png}"><img alt="image" th:src="@{/img/presentation/bw-1.png}"/>
+				<!--<a th:href="@{/img/presentation/bw-7.jpg}">--><!--点击循环查看图片-->
+					<a th:href="@{/img/presentation/bw-1.png}">
+					<img alt="image" th:src="@{/img/presentation/bw-1.png}"/><!--灰色图片-->
 				  <div class="decription-wrap">
 					<div class="image-bg">
-					   <p class="desc">My Resume</p>
+					   <p class="desc">相册名称</p>
 					</div>
 
 				  </div>
